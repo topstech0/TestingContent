@@ -20,6 +20,7 @@ public class S012_Calender1 {
 		
 		driver.findElement(By.id("datepicker")).click();
 		
+	// 2) Second
 		String myDate = "7";
 		String myMonth="January";
 		//String myYear="2020"; check this year for checking purpose.
@@ -28,12 +29,14 @@ public class S012_Calender1 {
 		//String month = driver.findElement(By.className("ui-datepicker-month")).getText();
 		//System.out.println(month);
 		
+		//5) fifth
 		String currentYear = driver.findElement(By.className("ui-datepicker-year")).getText();
 		
 		//Converting into Integer for Comparing the two years.
 		int y1 = Integer.parseInt(myYear);
 		int y2 = Integer.parseInt(currentYear);
 		
+		//4) fourth
 		while(!myYear.equals(driver.findElement(By.className("ui-datepicker-year")).getText())) 
 		{		
 			if(y1>y2)
@@ -46,7 +49,7 @@ public class S012_Calender1 {
 			}
 		}
 		
-		
+		//3) third
 		while(!myMonth.equals(driver.findElement(By.className("ui-datepicker-month")).getText())) 
 		{
 			if(y1>y2)
@@ -59,7 +62,7 @@ public class S012_Calender1 {
 			}
 		}
 		
-				
+		//1) first		
 		List<WebElement> dates = driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td/a"));
 		for(WebElement date : dates)
 		{
