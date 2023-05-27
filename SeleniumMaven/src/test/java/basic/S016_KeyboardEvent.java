@@ -17,6 +17,7 @@ public class S016_KeyboardEvent {
 		WebDriver driver = Driverconnection.connect();
 		driver.get("https://www.google.com/");
 		
+		S018_ScreenShotDemo.getScreenShot(driver, "F:\\img\\google.jpg"); //show after performing this demo.
 		WebElement search = driver.findElement(By.name("q"));
 		
 		Actions builder = new Actions(driver);

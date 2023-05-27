@@ -3,6 +3,7 @@ package basic;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,13 @@ public class S013_PracticeForm {
 		WebDriver driver = Driverconnection.connect();
 		driver.get("https://demoqa.com/automation-practice-form");
 		
+		// First show S017_ScrollDemoPractical.		
+		JavascriptExecutor js = (JavascriptExecutor)driver;	
+		//3) Scrolling down the page till the Bottom of page.
+        js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		//
+        
+        
 		driver.findElement(By.id("firstName")).sendKeys("abcd");
 		driver.findElement(By.id("lastName")).sendKeys("xyz");
 		driver.findElement(By.id("userEmail")).sendKeys("usermail@gmail.com");
